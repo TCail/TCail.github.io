@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Donut Delights</title>
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="../styles/normalize.css">
+	    <link rel="stylesheet" href="../styles/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <header>
+            <img src="../images/NEWLOGO.png" alt="DDLogo" style="height: 120px">
+        </header> 
+
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="current" href="../homepages/Menu.html">Menu</a></li>
+                    <li><a href="../homepages/Location.html">Location</a></li>
+                    <li><a href="../homepages/Contact.html">Contact</a></li>
+                    <li><a href="../homepages/AboutUs.html">About Us</a></li>
+                </ul>        
+            </nav>
+            
+            <div id="menuleft">
+                <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="../images/bullsHorn.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="../images/donutsInCase.jpg" style="width:100%; height: 385px">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="../images/pinwheels.jpg" style="width:100%; height: 385px">
+                </div>
+                    
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="../images/DonutsOnPlate.jpg" style="width:100%; height: 385px">
+                </div>    
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+            </div>
+            
+            <div id="menuright">
+                <h1>Menu</h1>
+                <p>Bakers Dozen Donuts: chocolate frosted, vanilla frosted, boston cream, jelly filled, cream filled, glazed, chocolate glazed, marble twist, sugar raised, plain donut, plain cruller, honey wheat, jelly puff, cream puff, coffee roll. &nbsp; (13) 8.65</p>
+                <p>Regular Donut: chocolate frosted, vanilla frosted, boston cream, jelly filled, cream filled, glazed, chocolate glazed, marble twist, sugar raised, plain donut, plain cruller, honey wheat, jelly puff, cream puff, coffee roll.  &nbsp; 1.05</p>
+                <p>Fancy Donuts: bow tie, éclair, apple turnover, fancy coffee roll.  &nbsp; 2.00</p>
+                <p>French Cruller  &nbsp; 2.00</p>
+            </div>
+            
+            <section>
+                <h2>Top sellers: &nbsp; Pistachio Pinwheels &nbsp; Boston Cream Delights &nbsp; Chocolate Confetti &nbsp; Marshmallow Mayhems &nbsp; French Twists &nbsp; Bulls Horns</h2>
+            </section>
+        
+            <div id="links">
+                <img src="../images/vetsAdSmall.gif" alt="vetgif" style="width: 80px; height: 80px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/"><img src="../images/facebook.png" alt="facebookpic" style="height: 80px"></a>
+                <a href="https://twitter.com/?lang=en"><img src="../images/twitter.png" alt="twitterpic" style="height: 96px"></a>
+                <a href="https://www.instagram.com/?hl=en"><img src="../images/instagram.png" alt="instagrampic" style="height: 80px"></a>
+            </div>
+        <footer>
+           <br>
+            <p>&copy; Donut Delights 2018</p>
+            
+        </footer>
+    </body>
+</html>
